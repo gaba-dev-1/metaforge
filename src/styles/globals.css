@@ -2,26 +2,373 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ===== Base Styles ===== */
+body { 
+  @apply text-cream bg-brown overscroll-none; 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ===== UI Components ===== */
+.tooltip { 
+  @apply absolute bg-brown/95 border border-gold/60 rounded p-2 text-xs pointer-events-none z-50 whitespace-nowrap transition-opacity shadow-md; 
+}
+
+/* Table styles */
+.stats-table th { 
+  @apply sticky top-0 z-10 bg-brown/95; 
+}
+
+.stats-table tbody tr { 
+  @apply h-14 hover:bg-gold/20; 
+}
+
+/* Scrollbars */
+::-webkit-scrollbar { 
+  @apply w-2 h-2; 
+}
+
+::-webkit-scrollbar-track { 
+  @apply bg-brown/50 rounded-sm; 
+}
+
+::-webkit-scrollbar-thumb { 
+  @apply bg-gold/70 rounded-sm; 
+}
+
+/* ===== Component Classes ===== */
+@layer components {
+  .card { 
+    @apply bg-brown/70 rounded-lg shadow-lg border border-gold/30 p-4; 
+  }
+  
+  .stat-box { 
+    @apply bg-brown-light/20 p-2 rounded text-center; 
+  }
+  
+  .filter-btn { 
+    @apply px-3 py-1 text-xs rounded-full transition-colors; 
+  }
+  
+  .filter-active { 
+    @apply bg-gold text-brown; 
+  }
+  
+  .filter-inactive { 
+    @apply bg-brown-light/30 hover:bg-brown-light/50; 
+  }
+  
+  .section-card {
+    @apply bg-brown-light/20 rounded-lg p-4;
+  }
+  
+  .section-title {
+    @apply text-lg font-semibold text-gold mb-3;
+  }
+  
+  .panel-card {
+    @apply bg-brown/60 rounded-lg border border-gold/40;
+  }
+  
+  .panel-title {
+    @apply text-gold text-lg px-3 py-2 ml-1 border-b border-gold/20;
+  }
+
+  .feature-banner {
+    @apply bg-brown/60 border border-gold/40 p-3 rounded-lg backdrop-blur-md;
+  }
+
+  .feature-cards-container {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-2;
+  }
+  
+  .feature-card {
+    @apply h-full bg-brown/5 backdrop-filter backdrop-blur-md overflow-hidden relative rounded-lg border border-gold/30 shadow-md transition-all hover:bg-brown/50 hover:border-gold/50;
+  }
+  
+  /* Loading State Classes */
+  .loading-shimmer {
+    @apply animate-pulse bg-brown-light/30 rounded;
+  }
+  
+  .loading-overlay {
+    @apply absolute inset-0 bg-brown/60 flex items-center justify-center z-50;
+  }
+  
+  .error-banner {
+    @apply bg-red-900/60 text-cream rounded-lg border border-red-500/60 p-3 my-2 flex justify-between items-center;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* ===== Hexagon Grid System ===== */
+.honeycomb-container {
+  @apply flex flex-col justify-center items-center overflow-hidden;
+  background: transparent;
+  filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.4));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* Hex rows */
+.hex-row {
+  @apply flex relative;
+  margin-bottom: -8px;
+}
+
+.hex-row:nth-child(odd) { margin-right: 36px; }
+.hex-row:nth-child(even) { margin-left: 58px; }
+
+/* Basic hex cell */
+.hex-cell {
+  width: 84px;
+  height: 92px;
+  @apply relative mr-2.5;
+}
+
+/* Hex container with clip path for hexagonal shape */
+.hex-container {
+  width: 84px;
+  height: 92px;
+  @apply absolute flex justify-center items-center transition-all duration-75;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: rgba(38, 17, 13, 0.7); /* Match brown background */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.hex-container:hover { background: rgba(61, 35, 28, 0.8); }
+.hex-drop-active { background: rgba(135, 90, 39, 0.4) !important; }
+.hex-drop-invalid { background: rgba(141, 30, 30, 0.4) !important; }
+
+/* Star container to allow overflow outside hex */
+.star-container {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);  
+    z-index: 30;
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.7));
+}
+
+/* ===== Units and Items ===== */
+/* Units on the board */
+.unit-wrapper {
+  @apply relative w-full flex flex-col items-center touch-manipulation;
+}
+
+.board-unit {
+  width: 78px;
+  height: 84px;
+  @apply relative z-10 flex justify-center items-center cursor-grab touch-manipulation;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.board-unit-border {
+  @apply absolute w-full h-full;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.board-unit-content {
+  @apply absolute flex justify-center items-center;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  top: 2px;
+  left: 2px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: #1c1c1c;
+}
+
+.board-unit-img {
+  @apply w-full h-full object-cover;
+  transform: scale(1.0);
+}
+
+/* Selector units - Changed to square format */
+.selector-unit-wrapper {
+  @apply relative cursor-grab inline-block touch-manipulation;
+}
+
+.selector-unit-border {
+  width: 48px;
+  height: 48px;
+  @apply absolute;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.selector-unit-content {
+  @apply absolute flex justify-center items-center overflow-hidden;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  top: 1px;
+  left: 1px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: #282828;
+}
+
+.selector-unit-img {
+  @apply w-full h-full object-contain;
+}
+
+/* Item container */
+.item-container-absolute {
+  @apply absolute bottom-0.5 left-1/2 flex justify-center p-0.5 z-50 rounded pointer-events-auto w-auto;
+  transform: translateX(-50%);
+  background: rgba(5, 3, 2, 0.85);
+  border: 1px solid rgba(182, 141, 64, 0.6);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.item-wrapper {
+  @apply relative w-5 h-5 mx-px transition-transform duration-150 touch-manipulation;
+}
+
+.item-wrapper:hover { 
+  transform: scale(1.2); 
+}
+
+.item-img {
+  @apply w-full h-full object-contain;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.4));
+}
+
+/* ===== Feature Card Styling ===== */
+.feature-hex-container {
+  @apply relative w-16 h-16 flex items-center justify-center;
+}
+
+.feature-hex-svg {
+  @apply absolute w-14 h-14 transition-all duration-300;
+}
+
+.feature-hex-content {
+  @apply text-gold text-3xl relative z-20;
+}
+
+.feature-hex-glow {
+  @apply absolute inset-0 blur-md opacity-30 group-hover:opacity-60 transition-all duration-500;
+}
+
+/* ===== Dropdown Menu Styling ===== */
+.dropdown-content {
+  @apply absolute z-50 w-48 mt-1 bg-brown/95 rounded-md shadow-lg;
+  animation: fadeIn 0.1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Mobile optimizations ===== */
+@media (max-width: 640px) {
+  .stats-table {
+    @apply text-xs;
   }
+  
+  .stats-table td, .stats-table th {
+    @apply px-2 py-2;
+  }
+  
+  .honeycomb-container {
+    @apply p-2 scale-90 transform-gpu;
+    min-width: 100%;
+    margin-left: -5%;
+  }
+  
+  .hex-cell {
+    @apply mr-1.5;
+  }
+}
+
+/* ===== Enhanced Responsive Styles ===== */
+
+/* Responsive container handling */
+.responsive-container {
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .responsive-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Mobile menu animation */
+@keyframes slideDown {
+  from { max-height: 0; opacity: 0; }
+  to { max-height: 1000px; opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { max-height: 1000px; opacity: 1; }
+  to { max-height: 0; opacity: 0; }
+}
+
+.menu-enter {
+  animation: slideDown 0.2s ease forwards;
+}
+
+.menu-exit {
+  animation: slideUp 0.2s ease forwards;
+}
+
+/* Dropdown positioning for mobile */
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: absolute;
+    right: 0;
+    width: 180px;
+    background-color: rgba(38, 17, 13, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+    z-index: 50;
+  }
+}
+
+/* Enhanced stats table responsiveness */
+@media (max-width: 640px) {
+  .stats-table th,
+  .stats-table td {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.75rem;
+  }
+  
+  .stats-table th:first-child,
+  .stats-table td:first-child {
+    padding-left: 0.5rem;
+  }
+  
+  .stats-table th:last-child,
+  .stats-table td:last-child {
+    padding-right: 0.5rem;
+  }
+}
+
+/* Fix for overlapping elements in cards on mobile */
+@media (max-width: 640px) {
+  .card {
+    padding: 0.75rem;
+  }
+  
+  .feature-cards-container {
+    gap: 0.5rem;
+  }
+  
+  .feature-card {
+    padding: 0.5rem;
+  }
+}
+
+/* Ensure horizontal scrolling works properly on mobile */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }

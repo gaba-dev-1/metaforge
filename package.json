@@ -9,18 +9,34 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@tanstack/react-query": "^5.72.1",
+    "@types/lodash": "^4.17.16",
+    "@types/pg": "^8.11.11",
+    "autoprefixer": "^10.4.21",
+    "axios": "^1.8.4",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.487.0",
+    "next": "14.2.26",
+    "pg": "^8.14.1",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^10.1.5",
     "react": "^18",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dnd-touch-backend": "^16.0.1",
     "react-dom": "^18",
-    "next": "14.2.26"
+    "recharts": "^2.15.2"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.26"
+    "eslint-config-next": "14.2.26",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }

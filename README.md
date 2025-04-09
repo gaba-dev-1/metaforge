@@ -1,40 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MetaForge - Tactician's Toolkit
 
-## Getting Started
+## Key Features
 
-First, run the development server:
+- **Meta Report**: View tier lists of units, traits, items, and compositions
+- **Stats Explorer**: Detailed statistics and filtering for all in-game entities
+- **Team Builder**: Interactive drag-and-drop team building tool
+- **Entity Pages**: Detailed information about units, traits, items, and compositions
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Structure
+
+```
+src/
+├── components/         # All reusable components
+│   ├── common/         # Shared components like banners, carousels
+│   ├── entity/         # Entity detail components (units, traits, items)
+│   ├── team-builder/   # Team builder specific components
+│   └── ui/             # Base UI components (card, button, etc.)
+├── mapping/            # Data mapping files
+├── pages/              # Page components (Next.js routing)
+│   ├── api/            # API routes
+│   ├── entity/         # Entity detail pages
+│   ├── meta-report/    # Meta report pages
+│   ├── stats-explorer/ # Stats explorer pages
+│   └── team-builder/   # Team builder pages
+├── styles/             # Global styles
+├── types/              # TypeScript type definitions
+└── utils/              # Utility functions and hooks
+    ├── api.ts          # API utility functions
+    ├── dataProcessing.ts # Data transformation utilities
+    ├── paths.ts        # Path utilities
+    └── useTftData.ts   # Data fetching and processing hook
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Dependencies
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Next.js
+- React
+- TanStack Query (React Query)
+- React DnD
+- Tailwind CSS
+- Lucide React (for icons)
+- Recharts (for charts)
+- Axios
+- Lodash

@@ -1,0 +1,243 @@
+{
+    "patch": "14.1",
+    "set": "14",
+    "name": "Cyber City",
+    "release_date": "April 1st, 2025",
+    "ui_updates": {
+      "team_planner_upgrades": {
+        "team_codes": "You can now Paste Team Codes into Team Planner while in game",
+        "undo_button": "You can now click the undo button in the Team Planner to take back any changes you just made"
+      },
+      "double_up": {
+        "status": "Graduated from Workshop",
+        "features": [
+          "You can now join and make a lobby with up to seven other players",
+          "Share a Tactician Health pool with your Partner",
+          "Elimination prevention is back, meaning the first time you'd be eliminated, instead drop to 1 HP"
+        ],
+        "teamwork_cannon": {
+          "replaces": "Rune of Allegiance",
+          "item_trading": "Use to send items and units to your duo. Items can be traded for like-strength items (Core and Components only). Trading items has no cooldown.",
+          "unit_trading": "Units can be traded with a cooldown dependent on the star of the unit. Four-round cooldown for one-stars. Six-round cooldown for two-, three-, and four-stars."
+        },
+        "gift_armory": {
+          "changes": [
+            "Gifts sent by the Gift Armory are now free",
+            "Options have been reduced to two or three",
+            "Spatulas can no longer be found in the Gift Armory",
+            "Gift power has been lowered since PBE",
+            "Gift Armories offered to both teammates during a stage will now always be the same Size"
+          ]
+        },
+        "pve_rounds": "Item drops from PvE rounds have been reduced by two item components due to the ease in making optimal items with the Teamwork Cannon",
+        "reinforcement": "After you've won your fight, you can reinforce your duo after a brief delay. Delay timing remains unchanged at 11 seconds from combat start",
+        "disabled_augments": [
+          "Future Sight", "Tomb Raider", "Cluttered Mind", "Pandora's Bench", 
+          "Clear Mind", "NO SCOUT NO PIVOT", "Over Encumbered", "Slammin'", "BRB"
+        ]
+      }
+    },
+    "set_mechanic": {
+      "hacks": {
+        "description": "Hacks will alter each game in a variety of ways, affecting how core systems such as Augments, the Shop, or Items function. These Hacks will always be beneficial and will impact all players at the same power level, just in slightly different ways.",
+        "frequency": "You'll see two to five Hacks each game."
+      }
+    },
+    "class_emblem_upgrades": {
+      "bastion_emblem": "Gain 10% of Amor and Magic Resistance as Ability Power",
+      "bruiser_emblem": "Deal an additional 1% magic damage per 240 Health",
+      "dynamo_emblem": "On cast, gain 1% Damage Amp per 15 mana spent",
+      "executioner_emblem": "Critical Strikes ignore 20% Armor and Magic Resistance",
+      "marksman_emblem": "Dealing physical damage removes 1 Armor",
+      "rapidfire_emblem": "Gain +2 range",
+      "slayer_emblem": "All incoming healing is increased by 25%",
+      "strategist_emblem": "Gain 50% of the other Strategist bonus",
+      "techie_emblem": "Gain 15% more Ability Power from all sources",
+      "vanguard_emblem": "Gain 150 health whenever you are shielded"
+    },
+    "opening_encounters": [
+      {"character": "Annie", "effect": "Annie changes all Augments to Gold tier this game.", "chance": "10.0%"},
+      {"character": "Zac", "effect": "Zac's virus turns all the Augments Prismatic.", "chance": "5.0%"},
+      {"character": "Aurora", "effect": "Aurora swaps the last Augment to Prismatic this game.", "chance": "5.0%"},
+      {"character": "Aurora", "effect": "Aurora swaps the first Augment to Prismatic this game.", "chance": "6.0%"},
+      {"character": "Vi", "effect": "Vi tosses you two component anvils.", "chance": "10.0%"},
+      {"character": "Zed", "effect": "Zed gives you an Artifact Anvil.", "chance": "4.0%"},
+      {"character": "Neeko", "effect": "Neeko transforms all the monsters into crabs that drop bonus loot.", "chance": "7.5%"},
+      {"character": "Neeko", "effect": "Neeko transforms all the monsters into crabs that drop bonus loot, but crabs on Stage 5+ are SUPER DEADLY.", "chance": "2.5%"},
+      {"character": "Urgot", "effect": "Urgot scrounges up some loot from a highly varied pool each stage.", "chance": "4.0%"},
+      {"character": "Garen", "effect": "Garen summons a trainer golem with 3 Emblems attached.", "chance": "4.0%"},
+      {"character": "Twisted Fate", "effect": "Twisted Fate grants you gold every stage.", "chance": "4.0%"}
+    ],
+    "hacked_encounters": [
+      {"type": "Augment", "effect": "There will be an extra Augment round in stage 2!", "chance": "2.5%"},
+      {"type": "Augment", "effect": "There will be an extra Augment round at the end of stage 3!", "chance": "3.0%"},
+      {"type": "Augment", "effect": "There will be an extra Augment round at the end of stage 4!", "chance": "2.5%"},
+      {"type": "Augment", "effect": "There will be an extra Augment round at the start of stage 5!", "chance": "2.0%"},
+      {"type": "Aurelion Sol", "effect": "The Stage 4 NPC round is replaced with a rerollable Treasure Armory!", "chance": "7.0%"},
+      {"type": "Azir", "effect": "The Augment rounds have been moved earlier this game.", "chance": "6.0%"},
+      {"type": "Hacked Egg", "effect": "Pick an egg with 1 of 3 hatching times at the start of Stage 4!", "chance": "5.0%"},
+      {"type": "Mecha Soldier", "effect": "Lucky shops tailored to your traits can appear!", "chance": "4.0%"},
+      {"type": "Sentinel", "effect": "Pick a Sentinel unit with 1 of 3 combat roles at the end of stage 4!", "chance": "4.0%"},
+      {"type": "Mecha Minion", "effect": "Two-star units can appear in your shop!", "chance": "2.0%"}
+    ],
+    "augment_changes": {
+      "removed_augments": [
+        "Anger Issues", "At What Cost", "Beggars Can Be Choosers", "Built Different",
+        "Ghosts of Friends Past", "Powered Shields", "Power Up", "Reroll Transfer",
+        "Superstars I", "Superstars II", "Unleash the Beast", "What Doesn't Kill You"
+      ],
+      "returning_augments": [
+        "AFK", "Ascension", "Big Friend I", "Big Friend II",
+        "Calculated Loss", "Final Ascension", "Fine Vintage", "Healing Orbs I",
+        "Healing Orbs II", "Hustler", "Last Stand", "Preparation I",
+        "Preparation II", "Cybernetic Bulk II", "Cybernetic Bulk III", "Cybernetic Implants II",
+        "Cybernetic Implants III", "Cybernetic Uplink II", "Cybernetic Uplink III"
+      ],
+      "adjusted_silver": {
+        "branching_out": [
+          "No longer grants a Reforger",
+          "No longer offered on 3-2"
+        ],
+        "branching_out_plus": "Added a 3-2 version of Branching Out that grants a Reforger",
+        "dummify": "Health Absorbed: 100% ⇒ 80%",
+        "item_collector_i": "No longer grants Health",
+        "glass_cannon_i": "Damage Amp: 20% ⇒ 18%",
+        "healing_orbs_i": "Healing: 225 ⇒ 200",
+        "lineup": "Resistances Per Unit: 2.5 ⇒ 2",
+        "one_for_all_i": "Damage Amp: 1.5% ⇒ 1%",
+        "overencumbered_bench_slots": "1 ⇒ 2",
+        "overencumbered": "Item Components: 3 ⇒ 2",
+        "preparation_i": [
+          "Stats per Stack: 3% AD and AP ⇒ 2% AD and AP",
+          "Health Per Stack: 25 ⇒ 20"
+        ],
+        "mentorship_i": [
+          "Health: 120 ⇒ 100",
+          "Attack Speed: 12% ⇒ 10%"
+        ],
+        "recombobulator": "no longer available on 4-2",
+        "support_mining": "Dummy Deaths: 7 ⇒ 8",
+        "support_mining_plus": "Dummy Deaths: 5 ⇒ 7",
+        "superstars_i": "Base Damage Amp: 5% ⇒ 4%",
+        "table_scraps": "Rounds: 3 ⇒ 2"
+      },
+      "adjusted_gold": {
+        "ascension": "Damage Amp: 60% ⇒ 50%",
+        "crownguarded": "Effect Increase: 100% ⇒ 85%",
+        "epoch": "XP Per Stage: 6 ⇒ 4",
+        "inspiring_epitaph": [
+          "No longer available on 2-1",
+          "Attack Speed: 10% ⇒ 8%"
+        ],
+        "investment_strategy_i": "Health Per Interest: 8 ⇒ 7",
+        "glass_cannon_ii": "Damage Amp: 25% ⇒ 20%",
+        "golemify": [
+          "Health Gain: 90% of champions' health ⇒ 70% of champions' health",
+          "Health per Stage: 500 ⇒ 1000"
+        ],
+        "healing_orbs_ii": "Healing: 450 ⇒ 400",
+        "heroic_grab_bag": [
+          "Gold: 9 ⇒ 7",
+          "Only available on 2-1"
+        ],
+        "heroic_grab_bag_plus": "Is now available on 3-2: 9 gold",
+        "heroic_grab_bag_plus_plus": "Is now available on 4-2: 13 gold",
+        "hustler": "Grants 2 gold initially",
+        "little_buddies": [
+          "Attack Speed: 7% ⇒ 6%",
+          "Health: 65 ⇒ 55"
+        ],
+        "maces_will": "Attack Speed: 8% ⇒ 6%",
+        "magic_roll": "Quadruple component cashout comes with 1 Magnetic Remover",
+        "manaflow_ii": "Mana Per Attack: 4 ⇒ 3",
+        "mentorship_ii": "Health: 220 ⇒ 200, Attack Speed: 18% ⇒ 16%",
+        "no_scout_no_pivot": "Health Per Round: 20 ⇒ 12",
+        "one_for_all_ii": "Damage Amp: 2% ⇒ 1.5%",
+        "overheal": "Bonus Damage: 150% ⇒ 130%",
+        "preparation_ii": "Stats per Stack: 4% AD and AP ⇒ 3% AD and AP",
+        "shop_glitch": "Duration: 30s (12 rolls) ⇒ 28s (11 rolls)",
+        "spears_will": "Attack Damage: 10% ⇒ 8%",
+        "starry_night": [
+          "Level 3 Odds: 18% ⇒ 15%",
+          "Level 4 Odds: 20% ⇒15%",
+          "Level 5 Odds: 22% ⇒ 18%",
+          "Level 7 Odds: 30% ⇒ 35%",
+          "Level 8 Odds: 50% ⇒ 60%",
+          "Level 9 Odds: 80% ⇒ 90%"
+        ],
+        "superstars_ii": "Bonus Per 3-Star: 4% ⇒ 3%",
+        "thorn_plated_armor": [
+          "Heal Percent: 50% of damage dealt ⇒ 35% of damage dealt",
+          "Bonus Damage by stage: 5/30/70/100% ⇒ 1/30/100/180%"
+        ],
+        "tower_defense": [
+          "AS: 0.4 ⇒ 0.5",
+          "AP Scaling: 60/90/130 ⇒ 40/60/90"
+        ],
+        "trifecta_i": [
+          "Attack Speed: 23% ⇒ 20%",
+          "Health: 250 ⇒ 220"
+        ],
+        "warpath": [
+          "Grants a two-star 2-cost",
+          "Damage Threshold: 60 ⇒ 80"
+        ]
+      },
+      "adjusted_prismatic": {
+        "blazing_soul": "Ability Power: 45 ⇒ 35",
+        "build_a_bud": "Gold: 10 ⇒ 8",
+        "expected_unexpectedness": "Rewards slightly altered to be more unexpected",
+        "final_ascension": [
+          "Initial Damage Amp: 20% ⇒ 15%",
+          "Final Damage Amp: 50% ⇒ 45%"
+        ],
+        "flexible": "Health Per Emblem: 40 ⇒ 20",
+        "immovable_object": "Effectiveness: +50% ⇒ +33%",
+        "investment_strategy_ii": [
+          "Health per Interest: 9 ⇒ 8",
+          "Initial Gold: 5 ⇒ 3"
+        ],
+        "living_forge": "Round Delay: 9 ⇒ 10",
+        "max_cap": "Gold Granted: 60 ⇒ 40",
+        "pumping_up_iii": "Initial Attack Speed: 16% ⇒ 12%",
+        "sword_overflow": "Attack Speed: 3% ⇒ 2%",
+        "tacticians_kitchen": "Turn Delay: 3 ⇒ 6",
+        "trifecta_ii": [
+          "Health: 330 ⇒ 300",
+          "Attack Speed: 33% ⇒ 25%",
+          "Teamwide Attack Speed: 9% ⇒ 5%"
+        ],
+        "upward_mobility": "Reroll Per Level-Up: 3 ⇒ 2",
+        "void_swarm": "Attack Speed & Omnivamp: 40% ⇒ 30%"
+      },
+      "trait_emblem_augments": {
+        "crests": "All Crests (Gold Trait Augments that give Emblems) are Stage 2-1 only and only grant the Emblem and no champions",
+        "crowns": "All Crowns (Prismatic Trait Augments that give Emblems, items, and champions) are Stage 2-1 only",
+        "circlets": "New Prismatic Augments that grant an Emblem+Champion, only appear on 3-2 and 4-2"
+      }
+    },
+    "item_changes": {
+      "hextech_gunblade": {
+        "ally_healing": "25% ⇒ 20%",
+        "omnivamp": "15% ⇒ 18%"
+      },
+      "steadfast_heart": {
+        "hp": "200 ⇒ 250",
+        "base_durability": "8% ⇒ 10%",
+        "empowered_durability": "15% ⇒ 18%"
+      },
+      "runaans_hurricane": {
+        "base_ad": "25% ⇒ 20%",
+        "bolt_ad_damage": "60% >> 50%"
+      },
+      "more_more_ellonomicon": {
+        "burn_duration": "30s ⇒ 8s"
+      },
+      "sunlight_cape": {
+        "burn_duration": "30s ⇒ 8s"
+      }
+    },
+    "bug_fixes": {
+      "training_dummies": "Training Dummies granted by the consumable can no longer be swapped onto the bench, or recombobulated"
+    }
+  }

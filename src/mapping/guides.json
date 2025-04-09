@@ -1,0 +1,171 @@
+{
+    "champion_tiers": {
+      "description": "Champions each have a tier represents their rarity which ranges from 1 to 5",
+      "tiers": [1, 2, 3, 4, 5],
+      "pool_size_per_champion": {
+        "1": 30,
+        "2": 25,
+        "3": 18,
+        "4": 10,
+        "5": 9
+      },
+      "drop_rates": {
+        "level_1": {"1": "100%", "2": "0%", "3": "0%", "4": "0%", "5": "0%"},
+        "level_2": {"1": "100%", "2": "0%", "3": "0%", "4": "0%", "5": "0%"},
+        "level_3": {"1": "75%", "2": "25%", "3": "0%", "4": "0%", "5": "0%"},
+        "level_4": {"1": "55%", "2": "30%", "3": "15%", "4": "0%", "5": "0%"},
+        "level_5": {"1": "45%", "2": "33%", "3": "20%", "4": "2%", "5": "0%"},
+        "level_6": {"1": "30%", "2": "40%", "3": "25%", "4": "5%", "5": "0%"},
+        "level_7": {"1": "19%", "2": "30%", "3": "40%", "4": "10%", "5": "1%"},
+        "level_8": {"1": "18%", "2": "25%", "3": "32%", "4": "22%", "5": "3%"},
+        "level_9": {"1": "15%", "2": "20%", "3": "25%", "4": "30%", "5": "10%"},
+        "level_10": {"1": "5%", "2": "10%", "3": "20%", "4": "40%", "5": "25%"}
+      }
+    },
+    "champion_star_levels": {
+      "description": "When acquired, a champion starts as a 1-Star. Three of the same 1-Star champion can be combined to create a stronger 2-Star champion. Three of the same 2-Star champions can be combined to create an even stronger 3-Star champion. Three of the same 3-Star champions can be combined to create an even, even stronger 4-Star champion.",
+      "combination_rules": "Champions combine automatically when you have three of the same champion with the same star-level. Champions in combat are invalidated as star-up targets and acquiring another copy will instead combine with the units on bench. Otherwise, champions on the board are prioritized.",
+      "stat_scaling": {
+        "attack_damage": {
+          "1_star": "100%",
+          "2_star": "150%",
+          "3_star": "225%",
+          "4_star": "337.5%"
+        },
+        "health": {
+          "1_star": "100%",
+          "2_star": "180%",
+          "3_star": "324%",
+          "4_star": "583.2%"
+        },
+        "ability": "Abilities also become stronger with each star level"
+      },
+      "costs": {
+        "tier_1": {
+          "1_star": 1,
+          "2_star": 3,
+          "3_star": 9,
+          "4_star": 9
+        },
+        "tier_2": {
+          "1_star": 2,
+          "2_star": 5,
+          "3_star": 17,
+          "4_star": 17
+        },
+        "tier_3": {
+          "1_star": 3,
+          "2_star": 8,
+          "3_star": 26,
+          "4_star": 8
+        },
+        "tier_4": {
+          "1_star": 4,
+          "2_star": 11,
+          "3_star": 35,
+          "4_star": 35
+        },
+        "tier_5": {
+          "1_star": 5,
+          "2_star": 14,
+          "3_star": 44,
+          "4_star": 44
+        },
+        "tier_6": {
+          "1_star": 6,
+          "2_star": 17,
+          "3_star": 53,
+          "4_star": 53
+        }
+      },
+      "selling": "Champions that are 1 star can be sold for their full gold price, however champion that are 2 stars or higher will return 1 gold below their net value, unless the champion is tier 1."
+    },
+    "champion_store": {
+      "description": "The player has a champion store of 5 randomly picked champions.",
+      "mechanics": [
+        "The player can spend 2 gold to reroll the pool.",
+        "Consecutive shops do not repeat unbought champions.",
+        "The champion store rerolls at the start of each round for free.",
+        "The player can lock the champion store to prevent the store from refreshing automatically. The player can unlock the shop at any time.",
+        "Champions from the store can be bought at the cost of their tier in gold"
+      ],
+      "special_mechanics": "With the Augment Starry Night, 1 and 2 cost champions in the shop have a chance to be 2-star, in which case it will cost 3 and 6 gold respectively."
+    },
+    "champion_items": {
+      "inventory": "A champion can hold up to 3 items at a time.",
+      "combination": "If two item components are used on the same champion, they are combined into a completed item, granting various effects based on the combination.",
+      "selling": "If a champion with items is sold, the items returns to the player's inventory.",
+      "source": "Defeated monsters sometimes drop items for champion to equip."
+    },
+    "champion_traits": {
+      "description": "Champions have one origin and one class, with a few exceptions. Satisfying the origin or class conditions grants bonus effects to the entire team or to the champions of the respective origin or class."
+    },
+    "champion_roles": {
+      "description": "Champions have 6 types for their role: attack and magic types which are either Carry, Caster, or Tank.",
+      "purpose": "Carries and Casters are for dealing damage, while Tanks are used to focus aggro so that your other units can deal damage for longer.",
+      "types": {
+        "attack_carry": "Deals physical damage and focused on attacking.",
+        "magic_carry": "Deals magical damage and focused on dealing sustained damage.",
+        "attack_caster": "Focused on using physical-based abilities.",
+        "magic_caster": "Deals magical damage and casting spells.",
+        "attack_tank": "Focused on surviving physical damage.",
+        "magic_tank": "Focused on surviving and staying alive against magical damage."
+      },
+      "info": "Mousing over the unit's role in their info will show the recommended items to use for that type of unit."
+    },
+    "champion_statistics": {
+      "health": "Amount of life a champion has. Champions are removed from combat when their health reaches 0. Health is shown above a champion's head as a bar that is separated for every 300 health the champion has.",
+      "omnivamp": "Returns a portion of the damage the champion deals as Health.",
+      "damage_amp": "Increases all damage dealt.",
+      "durability": "Reduces all damage taken.",
+      "attack_range": {
+        "description": "The range that a unit can attack another unit with their basic attacks, measured in hexes.",
+        "melee": "1 attack range means a champion can only attack enemies in adjacent hexes with their basic attacks. If a champion only has an animation for melee attacking, and their attack range is increased, then a beam will appear from that champion to their target.",
+        "ranged": "Ranged units have 2 or more attack range.",
+        "abilities": "Some abilities have their own targeting (such as targeting the further unit) that is separate or more specialized (such as lowest health in range) in regards to the attack range."
+      },
+      "basic_attack": {
+        "description": "Default attack for champions, they deal physical damage.",
+        "attack_damage": "The amount of damage a champion will do with each basic attack.",
+        "attack_speed": "Measured in attacks per second. All attack speed increases are percentage-based, and affect each champion based on their base attack speed. Attack speed slows are based on total attack speed. Attack speed is capped at 5.0 attacks per second. But the attack speed of a champion can be increased beyond this limit (by buffs from other champions).",
+        "critical_strike": "Basic attacks and abilities that deal physical damage have a chance to critically strike to deal 30% bonus damage, determined by critical strike chance. Every champion starts with 25% critical strike chance. The bonus damage is further increased by critical strike damage (which stacks additively). Excess critical strike chance to converted into bonus Critical Strike Damage.",
+        "armor": "Reduces the damage taken from physical damage. Formula: Damage multiplier = 100 / (100 + Armor)"
+      },
+      "ability": {
+        "description": "Champions have a unique ability that they can cast once their mana bar is full. Some champions are manaless and instead have a permanent passive effect.",
+        "cast_time": "On patch V9.15, it was indicated that most ability cast are 0.5 seconds.",
+        "mana": "Generated by basic attacking and taking damage.",
+        "ability_power": "Increases the potency of a champion's ability. Each point of ability power grants 1% increased ability effect.",
+        "magic_resistance": "Reduces the damage taken from magic damage. Formula: Damage multiplier = 100 / (100 + MR)",
+        "damage_types": "Most abilities deal magic damage, with the exceptions of attack-modifiers. Some champions deal physical damage with their ability, and others deal true damage."
+      },
+      "movement_speed": {
+        "description": "The speed at which a champion moves in the arena. Champions have 550 base movement speed.",
+        "combat_start": "Melee champions move slightly earlier at the start of combat than ranged champions.",
+        "chase_mechanics": "If a champion is in the attack range of their target, and the target moves out of range, the attacker only chases their target for 1 hex before switching to the closest enemy."
+      }
+    },
+    "game_mechanics": {
+      "true_damage": "A type of damage that ignores resistances (armor and magic resistance).",
+      "dodge": "Causes incoming attacks to Miss (deal no damage and do not apply spell or item effects).",
+      "stealth": "Temporarily makes the target invisible and untargetable.",
+      "burn": "A debuff that deals a percent of the target's max Health as true damage every second.",
+      "wound": "A debuff that reduces healing on the target (usually by 33%) for a duration.",
+      "chill": "A debuff that reduces the target's attack speed.",
+      "item_disable": "A debuff that disables the target's items with Jammed",
+      "shred": "A debuff that reduces the target's magic resist.",
+      "sunder": "A debuff that reduces the target's armor.",
+      "crowd_control": {
+        "airborne": "Moves the target in a specified direction or to a specific point. For the duration the target is unable to move, declare attacks or cast their ability.",
+        "banish": "Temporarily disables a target, making them unable to perform any action and cannot be attacked by enemy team for a duration.",
+        "disarm": "Prevents the target from declaring basic attacks for a duration.",
+        "silence": "Prevents the target from activating their ability.",
+        "root": "Prevents the target from moving.",
+        "stun": "Prevents the target from moving, attacking and activating their ability.",
+        "taunt": "Forces the target to attack the source.",
+        "fear": "Forces the target to move away.",
+        "slow": "Slows the target's movement speed."
+      },
+      "bench": "If a player's bench is full, the extra champion gained with a carousel will be sold at the end of Planning phase."
+    }
+  }

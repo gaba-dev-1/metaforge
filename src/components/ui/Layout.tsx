@@ -111,7 +111,7 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div className="min-h-screen bg-main-bg bg-cover bg-center bg-fixed flex flex-col">
-      <div className="flex-grow flex flex-col min-h-screen bg-brown/80">
+      <div className="flex-grow flex flex-col min-h-screen bg-brown/60">
         {/* Desktop and Mobile Navbar */}
         <nav className="bg-brown/95 shadow-lg sticky top-0 z-50 border-b border-gold/40">
           <div className="max-w-7xl mx-auto px-2 sm:px-4">

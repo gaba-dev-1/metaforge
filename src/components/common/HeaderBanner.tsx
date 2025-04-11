@@ -10,7 +10,7 @@ export function HeaderBanner() {
     <Card className="h-auto py-2 px-3 sm:px-4 sm:p-3 mt-4 -mb-2 border border-gold/40">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div className="text-md text-cream/90">
-          TFT {currentRegion !== 'all' ? `${currentRegion} ` : ''}latest matches
+          Teamfight Tactics {currentRegion !== 'all' ? `${currentRegion} ` : ''}latest matches
         </div>
         
         <div className="flex flex-wrap justify-start sm:justify-end gap-1.5 overflow-x-auto">

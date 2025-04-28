@@ -1,0 +1,202 @@
+// Base interface for statistics
+export interface BaseStats {
+  id: string; 
+  name: string; 
+  icon: string;
+  count?: number; 
+  winRate?: number; 
+  playRate?: number; 
+  avgPlacement?: number; 
+  top4Rate?: number; 
+  totalGames?: number;
+  region?: string;
+}
+
+// Game data interfaces
+export interface TraitData {
+  name: string; 
+  description: string; 
+  icon: string;
+  tiers: Array<{ units: number; value: string; icon: string; }>;
+}
+
+export interface UnitData {
+  name: string; 
+  icon: string; 
+  cost: number;
+  traits: { origin: string | string[]; class: string | string[]; };
+  ability: { name: string; description: string; type: string; mana_cost?: number[]; };
+  stats: Record<string, number>;
+}
+
+export interface ItemData {
+  name: string; 
+  category: string; 
+  icon: string; 
+  description?: string;
+}
+
+// Item Combo interface
+export interface ItemCombo {
+  mainItem: ProcessedItem;
+  items: ProcessedItem[];
+  winRate: number;
+  frequency?: number;
+}
+
+// API interfaces
+export interface LeagueEntry { summonerId: string; leaguePoints: number; }
+export interface League { entries: LeagueEntry[]; }
+export interface Summoner { puuid: string; id: string; }
+export interface Match { metadata: { match_id: string }; info: { participants: any[] }; }
+
+export interface ProcessedMatch {
+  id: string;
+  region?: string;
+  participants: {
+    placement: number;
+    units: { name: string; itemNames: string[]; }[];
+    traits: { name: string; tier_current: number; num_units: number; }[];
+  }[];
+}
+
+// Processed data interfaces
+export interface ProcessedItem extends BaseStats { 
+  category?: string; 
+  stats?: {
+    count?: number;
+    avgPlacement?: number;
+    winRate?: number;
+    top4Rate?: number;
+  };
+  unitsWithItem?: {
+    id: string;
+    name: string;
+    icon: string;
+    cost: number;
+    count: number;
+    winRate: number;
+    avgPlacement: number;
+    relatedComps?: Composition[];
+  }[];
+  relatedComps?: Composition[];
+  combos?: ItemCombo[];
+}
+
+export interface ProcessedUnit extends BaseStats {
+  cost: number;
+  items?: ProcessedItem[];
+  bestItems?: ProcessedItem[];
+  stats?: {
+    count?: number;
+    avgPlacement?: number;
+    winRate?: number;
+    top4Rate?: number;
+  };
+  relatedComps?: Composition[];
+  // Add the traits property to match what's being used in team-builder
+  traits?: {
+    origin?: string | string[];
+    class?: string | string[];
+  };
+  starLevel?: number; // Star level for unit (1-4 stars)
+}
+
+export interface ProcessedTrait extends BaseStats {
+  tier: number;
+  numUnits: number; 
+  tierIcon: string;
+  stats?: {
+    count?: number;
+    avgPlacement?: number;
+    winRate?: number;
+    top4Rate?: number;
+  };
+  relatedComps?: Composition[];
+}
+
+export interface Composition extends BaseStats {
+  traits: ProcessedTrait[]; 
+  units: ProcessedUnit[];
+  placementData?: { placement: number; count: number; }[];
+}
+
+// Add pagination to ProcessedData
+export interface ProcessedData { 
+  compositions: Composition[]; 
+  summary: {
+    totalGames: number; 
+    avgPlacement: number; 
+    topComps: Composition[];
+  }; 
+  region?: string;
+  pagination?: {
+    page: number;
+    limit: number;
+    totalItems: number;
+    totalPages: number;
+  };
+}
+
+export interface TierList {
+  S: BaseStats[]; 
+  A: BaseStats[]; 
+  B: BaseStats[]; 
+  C: BaseStats[];
+}
+
+// Team builder interfaces
+export interface BoardCell {
+  unit?: ProcessedUnit;
+  items?: ProcessedItem[];
+}
+
+export interface SavedComposition {
+  id: string;
+  name: string;
+  board: Record<string, BoardCell>;
+  date: string;
+  traits?: {id: string, count: number}[];
+}
+
+// Feature card type
+export interface FeatureCardProps {
+  title: string;
+  icon: React.ReactNode;
+  description: string;
+  linkTo: string;
+}
+
+// Region type
+export interface Region {
+  id: string;
+  name: string;
+  status?: 'active' | 'degraded' | 'down';
+  lastError?: Date;
+  retryAttempts?: number;
+}
+
+// Error handling types - new
+export interface ApiError {
+  type: 'timeout' | 'rate-limit' | 'server' | 'network' | 'unknown';
+  message: string;
+  statusCode?: number;
+  region?: string;
+  timestamp: Date;
+}
+
+export interface ErrorState {
+  hasError: boolean;
+  error?: ApiError | null;
+  retryFn?: () => void;
+}
+
+export interface ProcessedDisplayTrait {
+  id: string;
+  name: string;
+  icon: string;
+  tierIcon?: string;
+}
+
+// Module declarations
+declare namespace NodeJS { interface ProcessEnv { RIOT_API_KEY: string; } }

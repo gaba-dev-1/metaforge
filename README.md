@@ -1,7 +1,7 @@
 # 🔮 MetaForge TFT
 
 <p align="center">
-  <img src="public/assets/logo.png" alt="MetaForge Logo" width="200" height="200" style="border-radius: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="public/assets/app.png" alt="MetaForge Logo" width="200" height="200" style="border-radius: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </p>
 
 <p align="center">

@@ -1,59 +1,52 @@
 <div align="center">
 
-# ⚔️ MetaForge TFT
+# ⚒️ MetaForge TFT
 
-**Data-driven tools for Teamfight Tactics mastery**
+**Advanced Analytics for Teamfight Tactics**
 
-*Experiment. Analyze. Dominate.*
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-0.1.0-green.svg)
 ![React](https://img.shields.io/badge/React-18.3.1-61DAFB.svg)
 ![Next.js](https://img.shields.io/badge/Next.js-15.3.2-000000.svg)
 
 </div>
 
-## 🔍 Overview
+## 📋 Overview
 
-MetaForge TFT provides powerful analytical tools for Tacticians who want to develop their own strategies rather than following the meta. Through comprehensive data analysis and strategic experimentation, we help players understand the game at a deeper level and create winning compositions.
+MetaForge TFT is an analytics platform designed to provide detailed insights into Teamfight Tactics gameplay through statistical analysis and interactive tools. The application enables data-driven decision making for strategic development and optimization.
 
-## 🧩 Key Features
+## 📌 Features
 
-### 📊 Team Builder
-Create and optimize your compositions with precise control:
-- Interactive board with drag-and-drop positioning
-- Real-time trait synergy calculator
-- Item optimization suggestions
-- Composition library for saving and organizing strategies
+### 🧩 Team Builder
+- Interactive champion positioning system with drag-and-drop functionality
+- Real-time trait synergy calculation
+- Item optimization recommendations
+- Composition storage and sharing capabilities
 
 ### 📈 Performance Analytics
-Gain insights through comprehensive statistical analysis:
-- Unit performance across different team compositions
-- Item efficiency metrics based on placement data
-- Win rates and Top 4 percentages by rank tier
-- Matchup analysis against popular compositions
+- Unit performance metrics across various team compositions
+- Item efficiency analysis based on placement data
+- Win rate and Top 4 placement statistics by rank tier
+- Matchup analysis against meta compositions
 
-### 🔎 Statistics Explorer
-Discover emerging strategies and optimize existing ones:
-- Stage-by-stage power level comparisons
-- Economic patterns from high-rank players
-- Flexible pivot options based on your items
-- Counter-composition recommendations
+### 🔍 Strategy Development
+- Stage-by-stage power analysis
+- Economic pattern identification
+- Flexible transition options based on item components
+- Counter-strategy recommendations
 
-### 📝 Patch Analysis
-Stay ahead with each update:
-- Performance shifts after balance changes
-- Emerging compositions before they become standard
-- System change impact assessments
-- Adaptation recommendations based on your playstyle
+### 📊 Meta Analysis
+- Patch-to-patch performance comparison
+- Trend identification for emerging compositions
+- System change impact assessment
+- Adaptation strategy development
 
-## 🛠️ Technology Stack
+## 🛠️ Technical Architecture
 
 ```
-Frontend: React 18, Next.js 15, TypeScript, TailwindCSS
-Data: React Query, Recharts, PostgreSQL
-Interaction: React DnD, Framer Motion, DnD Kit
-Styling: GSAP, React Spring
+Frontend: React, Next.js, TypeScript, TailwindCSS
+Data Visualization: Recharts
+State Management: React Query
+Database: PostgreSQL
 ```
 
 ## 📁 Project Structure
@@ -64,56 +57,32 @@ Styling: GSAP, React Spring
 │   ├── ui/           # Base UI elements
 │   ├── common/       # Shared components
 │   ├── entity/       # TFT entity components
-│   ├── team-builder/ # Team builder feature
-│   ├── leaderboard/  # Leaderboard components
-│   └── auth/         # Authentication UI
+│   └── team-builder/ # Team builder feature
 ├── pages/            # Application routes
-│   ├── api/          # API endpoints
-│   ├── entity/       # Entity details pages
-│   ├── meta-report/  # Meta analysis reports
-│   ├── team-builder/ # Team builder feature
-│   └── [more]/       # Additional pages
 ├── hooks/            # Custom React hooks
 ├── utils/            # Utility functions
-│   ├── db/           # Database helpers
-│   ├── auth/         # Authentication utils
-│   └── continentFetcher/ # API integration
 ├── mapping/          # Game data mapping
 └── types/            # TypeScript definitions
 ```
 
 ## 📦 Dependencies
 
-MetaForge TFT uses a curated set of modern dependencies to deliver a powerful user experience:
+The application requires several key dependencies:
 
-**Core:**
-- React 18.3.1
-- Next.js 15.3.2
-- TypeScript 5.2.2
+- **Core Framework**: React, Next.js
+- **UI Components**: TailwindCSS, Framer Motion
+- **Data Visualization**: Recharts
+- **Data Management**: React Query, PostgreSQL
+- **Interactive Elements**: React DnD, DnD Kit
 
-**UI & Interaction:**
-- TailwindCSS 3.3.3
-- Framer Motion 10.16.4
-- DnD Kit & React DnD for drag-and-drop
-- Recharts 2.8.0 for data visualization
+## 🔗 Resource Integration
 
-**Data Management:**
-- React Query 4.35.3
-- PostgreSQL (pg 8.11.3)
-- Axios 1.5.0
-
-<div align="center">
-  
-## 🔄 Resources
-
-MetaForge proudly utilizes high-quality game assets from the [TFT-Assets](https://github.com/gaba-dev-1/tft-assets) project, which provides a comprehensive collection of Teamfight Tactics game resources, icons, and data structures.
+MetaForge incorporates assets from the [TFT-Assets](https://github.com/gaba-dev-1/tft-assets) repository, providing standardized game resources and data structures for the application's visualization and analysis systems.
 
 <div align="center">
 
-## 🚀 Get Started
+## 🌐 Links
 
-Visit us at [metaforge.lol](https://metaforge.lol) or follow [@metaforgelol](https://twitter.com/metaforgelol)
-
-*MetaForge TFT – Develop strategies backed by data.*
+[Website](https://metaforge.lol) • [Twitter](https://twitter.com/metaforgelol)
 
 </div>

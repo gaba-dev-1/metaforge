@@ -1,0 +1,50 @@
+{
+  "name": "metaforge",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@fontsource/exo-2": "^5.2.5",
+    "@react-hook/window-size": "^3.1.1",
+    "@tanstack/react-query": "^5.76.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/lodash": "^4.17.16",
+    "@types/pg": "^8.15.2",
+    "@use-gesture/react": "^10.3.1",
+    "autoprefixer": "^10.4.21",
+    "axios": "^1.9.0",
+    "cookie": "^1.0.2",
+    "framer-motion": "^12.12.1",
+    "gsap": "^3.13.0",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.510.0",
+    "next": "14.2.26",
+    "pg": "^8.16.0",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^10.1.6",
+    "react": "^18",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dnd-touch-backend": "^16.0.1",
+    "react-dom": "^18",
+    "react-spring": "^10.0.0",
+    "recharts": "^2.15.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.26",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

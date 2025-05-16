@@ -17,7 +17,7 @@
 
 MetaForge TFT provides powerful analytical tools for Tacticians who want to develop their own strategies rather than following the meta. Through comprehensive data analysis and strategic experimentation, we help players understand the game at a deeper level and create winning compositions.
 
-## ✨ Key Features
+## 🧩 Key Features
 
 ### 📊 Team Builder
 Create and optimize your compositions with precise control:
@@ -33,7 +33,7 @@ Gain insights through comprehensive statistical analysis:
 - Win rates and Top 4 percentages by rank tier
 - Matchup analysis against popular compositions
 
-### 🔎 Strategy Explorer
+### 🔎 Statistics Explorer
 Discover emerging strategies and optimize existing ones:
 - Stage-by-stage power level comparisons
 - Economic patterns from high-rank players
@@ -103,20 +103,7 @@ MetaForge TFT uses a curated set of modern dependencies to deliver a powerful us
 - Axios 1.5.0
 
 <div align="center">
-
-## 🎮 For Every Type of Tactician
-
-</div>
-
-**For Competitive Players**  
-Track your improvement, identify weaknesses in your strategy, and adapt to meta shifts with data-backed insights.
-
-**For Creative Tacticians**  
-Test innovative compositions and find underexplored strategies with statistical validation of your experiments.
-
-**For Adaptable Players**  
-Master the art of transitioning between compositions and learn which units and items offer the most flexibility.
-
+  
 ## 🔄 Resources
 
 MetaForge proudly utilizes high-quality game assets from the [TFT-Assets](https://github.com/gaba-dev-1/tft-assets) project, which provides a comprehensive collection of Teamfight Tactics game resources, icons, and data structures.

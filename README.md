@@ -29,7 +29,7 @@ MetaForge TFT is an analytics platform designed to provide detailed insights int
 - Matchup analysis against meta compositions
 
 ### 🔍 Strategy Development
-- Stage-by-stage power analysis
+- Multi-conditionning metrics analysis
 - Economic pattern identification
 - Flexible transition options based on item components
 - Counter-strategy recommendations

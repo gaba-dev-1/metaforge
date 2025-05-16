@@ -40,15 +40,6 @@ MetaForge TFT is an analytics platform designed to provide detailed insights int
 - System change impact assessment
 - Adaptation strategy development
 
-## 🛠️ Technical Architecture
-
-```
-Frontend: React, Next.js, TypeScript, TailwindCSS
-Data Visualization: Recharts
-State Management: React Query
-Database: PostgreSQL
-```
-
 ## 📁 Project Structure
 
 ```
